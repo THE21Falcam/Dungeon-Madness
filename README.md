@@ -9,3 +9,4 @@
 # ChangeLog
  - # Beta 0.1
    - Defined Basic Structure for the Game
+   - Test
