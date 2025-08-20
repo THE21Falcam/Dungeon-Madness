@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://1ci2gytpywd2"]
+[gd_scene load_steps=2 format=3 uid="uid://1ci2gytpywd2"]
+
+[ext_resource type="Script" uid="uid://b4wsmbksgjhyx" path="res://GUI/TitleMenu/title_menu.gd" id="1_5us8g"]
 
 [node name="TitleMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +9,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_5us8g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
