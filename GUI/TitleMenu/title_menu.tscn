@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ci2gytpywd2"]
+[gd_scene load_steps=4 format=3 uid="uid://1ci2gytpywd2"]
 
 [ext_resource type="Script" uid="uid://b4wsmbksgjhyx" path="res://GUI/TitleMenu/title_menu.gd" id="1_5us8g"]
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_5us8g"]
+
+[sub_resource type="Texture2DRD" id="Texture2DRD_xamyd"]
 
 [node name="TitleMenu" type="Control"]
 layout_mode = 3
@@ -12,6 +16,96 @@ grow_vertical = 2
 script = ExtResource("1_5us8g")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -443.0
+offset_top = -199.0
+offset_right = -9.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("Texture2DRD_5us8g")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -134.0
+offset_top = -45.0
+offset_right = 134.0
+offset_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "Doungen Madness"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 209.0
+offset_top = -178.0
+offset_right = 361.0
+offset_bottom = -26.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("Texture2DRD_xamyd")
+
+[node name="ProgressBar" type="ProgressBar" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -36.0
+offset_top = 93.0
+offset_right = 74.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="TextureRect2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -71.0
+offset_top = 94.5
+offset_right = -49.0
+offset_bottom = 117.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP"
+
+[node name="Enter" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 196.0
+offset_top = 89.0
+offset_right = 376.0
+offset_bottom = 159.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 32
+text = "Enter"
+
+[connection signal="button_up" from="Enter" to="." method="_on_enter_button_up"]
