@@ -1,27 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ci2gytpywd2"]
+[gd_scene load_steps=3 format=3 uid="uid://b72pmf3gs41en"]
 
-[ext_resource type="Script" uid="uid://b4wsmbksgjhyx" path="res://Main World/main_world.gd" id="1_wo1hl"]
+[ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/dungeonSprites by analogstudios/demon_.png" id="1_4f0rs"]
+[ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://GUI/Settings/settings.tscn" id="2_2tp7a"]
 
-[node name="MainWorld" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_wo1hl")
+[node name="Node2D" type="Node2D"]
+texture_filter = 1
 
-[node name="DungenHall" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(160, 193)
+scale = Vector2(3, 3)
+texture = ExtResource("1_4f0rs")
+hframes = 8
+vframes = 6
 
-[node name="DungenFoe" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DungenPlayer" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Settings" parent="CanvasLayer" instance=ExtResource("2_2tp7a")]
