@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://b72pmf3gs41en"]
+[gd_scene load_steps=6 format=3 uid="uid://b72pmf3gs41en"]
 
+[ext_resource type="Texture2D" uid="uid://bhxp5gtrgr8td" path="res://Assets/Created by Master/DungenLayout.png" id="1_2tp7a"]
 [ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://Main GUI/Settings/settings.tscn" id="2_2tp7a"]
 [ext_resource type="PackedScene" uid="uid://c6kbe1mcxwwga" path="res://Dungen Foe/dungen_foe.tscn" id="2_gbj8d"]
+[ext_resource type="Texture2D" uid="uid://i7iwwefbsp7t" path="res://Assets/Dungeon Sprites by analogstudios/mHero_.png" id="3_gbj8d"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4f0rs"]
 
@@ -11,37 +13,129 @@ texture_filter = 1
 [node name="Main Camera" type="Camera2D" parent="."]
 position = Vector2(320, 180)
 
-[node name="Dungen Show" type="Node" parent="."]
+[node name="Main Dungen" type="Node" parent="."]
 
-[node name="Dungen Hall" type="Sprite2D" parent="Dungen Show"]
-position = Vector2(119, 69)
+[node name="Dungen Hall" type="Sprite2D" parent="Main Dungen"]
+position = Vector2(161, 180)
 scale = Vector2(3, 3)
+texture = ExtResource("1_2tp7a")
 
-[node name="Dungen Foe" parent="Dungen Show" instance=ExtResource("2_gbj8d")]
-position = Vector2(145, 164)
+[node name="Dungen Foe" parent="Main Dungen" instance=ExtResource("2_gbj8d")]
+position = Vector2(159, 158)
 
-[node name="Dungen Player" type="AnimatedSprite2D" parent="Dungen Show"]
+[node name="Dungen Hero" type="AnimatedSprite2D" parent="Main Dungen"]
 sprite_frames = SubResource("SpriteFrames_4f0rs")
 
-[node name="Dungen Input" type="Node" parent="."]
+[node name="Dungen Panal" type="Node" parent="."]
 
-[node name="Button" type="Button" parent="Dungen Input"]
+[node name="Player Profile" type="Sprite2D" parent="Dungen Panal"]
+texture_filter = 1
+position = Vector2(475, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("3_gbj8d")
+hframes = 8
+vframes = 6
+
+[node name="Extra UI" type="CanvasLayer" parent="."]
+
+[node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]
+visible = false
+
+[node name="Dungen GUI" type="Control" parent="Extra UI"]
+layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 45.0
-offset_top = -25.0
-offset_right = 199.0
-offset_bottom = 25.0
+offset_left = -320.0
+offset_top = -180.0
+offset_right = 320.0
+offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Foe HP Bar" type="ProgressBar" parent="Extra UI/Dungen GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -122.0
+offset_right = -74.0
+offset_bottom = -83.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hero HP Text" type="Label" parent="Extra UI/Dungen GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 71.0
+offset_top = -18.5
+offset_right = 93.0
+offset_bottom = 4.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP"
+
+[node name="Hero HP Bar" type="ProgressBar" parent="Extra UI/Dungen GUI/Hero HP Text"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 18.0
+offset_top = -13.5
+offset_right = 164.0
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+step = 1.0
+value = 100.0
+
+[node name="GridContainer" type="GridContainer" parent="Extra UI/Dungen GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = 21.0
+offset_right = 272.0
+offset_bottom = 117.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Attack" type="Button" parent="Extra UI/Dungen GUI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 text = "Attack
 "
 
-[node name="Dungen GUI" type="Node" parent="."]
+[node name="Skill" type="Button" parent="Extra UI/Dungen GUI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Skill"
 
-[node name="Extra UI" type="CanvasLayer" parent="."]
+[node name="Item" type="Button" parent="Extra UI/Dungen GUI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Items"
 
-[node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]
+[node name="Settings" type="Button" parent="Extra UI/Dungen GUI/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Settings"
