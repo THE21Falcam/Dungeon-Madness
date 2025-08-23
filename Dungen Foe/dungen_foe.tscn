@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://c6kbe1mcxwwga"]
+[gd_scene load_steps=8 format=3 uid="uid://c6kbe1mcxwwga"]
 
+[ext_resource type="Script" uid="uid://bfcbsxb7myxky" path="res://Dungen Foe/dungen_foe.gd" id="1_i3c0f"]
 [ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/Dungeon Sprites by analogstudios/demon_.png" id="1_nb8te"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n83fd"]
@@ -41,6 +42,7 @@ animations = [{
 [node name="Dungen Foe" type="Node2D"]
 texture_filter = 1
 scale = Vector2(4, 4)
+script = ExtResource("1_i3c0f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_cexqq")
