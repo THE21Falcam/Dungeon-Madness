@@ -1,13 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://b72pmf3gs41en"]
 
-[ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/dungeonSprites by analogstudios/demon_.png" id="1_4f0rs"]
+[ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/Dungeon Sprites by analogstudios/demon_.png" id="1_4f0rs"]
 [ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://GUI/Settings/settings.tscn" id="2_2tp7a"]
 
 [node name="Node2D" type="Node2D"]
 texture_filter = 1
 
+[node name="Camera2D" type="Camera2D" parent="."]
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(160, 193)
+position = Vector2(119, 69)
 scale = Vector2(3, 3)
 texture = ExtResource("1_4f0rs")
 hframes = 8
