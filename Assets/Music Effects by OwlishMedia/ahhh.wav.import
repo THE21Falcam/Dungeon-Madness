@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c2btf7x8r16k1"
+path="res://.godot/imported/ahhh.wav-7c52f6143f0bdcb1311a8512d01febb8.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/ahhh.wav"
+dest_files=["res://.godot/imported/ahhh.wav-7c52f6143f0bdcb1311a8512d01febb8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

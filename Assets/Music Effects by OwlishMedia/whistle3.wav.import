@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br8i6nnchnorx"
+path="res://.godot/imported/whistle3.wav-f00c4e1ef7907429764dea806e106098.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/whistle3.wav"
+dest_files=["res://.godot/imported/whistle3.wav-f00c4e1ef7907429764dea806e106098.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

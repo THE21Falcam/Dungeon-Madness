@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2te411ngpigx"
+path="res://.godot/imported/reflect.wav-7b85b708cdec8815436bbfabcd2f379a.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/reflect.wav"
+dest_files=["res://.godot/imported/reflect.wav-7b85b708cdec8815436bbfabcd2f379a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfenodqvtey8p"
+path="res://.godot/imported/transform.wav-aed3b96cf45d9c0a8632875f1f64dc0b.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/transform.wav"
+dest_files=["res://.godot/imported/transform.wav-aed3b96cf45d9c0a8632875f1f64dc0b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

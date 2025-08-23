@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c88eaq46m06rv"
+path="res://.godot/imported/whistle_wolf.wav-1ea22a414242303f66e2c9f2a07019a9.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/whistle_wolf.wav"
+dest_files=["res://.godot/imported/whistle_wolf.wav-1ea22a414242303f66e2c9f2a07019a9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

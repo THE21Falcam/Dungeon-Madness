@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btovkfe1xb1pe"
+path="res://.godot/imported/laser2.wav-6a0aaf21646f5371dbcb9a38c9cefd3d.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/laser2.wav"
+dest_files=["res://.godot/imported/laser2.wav-6a0aaf21646f5371dbcb9a38c9cefd3d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

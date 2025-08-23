@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjqnf2pxdo55o"
+path="res://.godot/imported/birdchirp2.wav-2fce6824190e3d6b4ade3d0a15119e06.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/birdchirp2.wav"
+dest_files=["res://.godot/imported/birdchirp2.wav-2fce6824190e3d6b4ade3d0a15119e06.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

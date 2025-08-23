@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cu83mays7f25x"
+path="res://.godot/imported/blastoff.wav-887aa2be83a24ee56cb156ed0f8ace52.sample"
+
+[deps]
+
+source_file="res://Assets/Music Effects by OwlishMedia/blastoff.wav"
+dest_files=["res://.godot/imported/blastoff.wav-887aa2be83a24ee56cb156ed0f8ace52.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
