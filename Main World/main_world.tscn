@@ -1,20 +1,47 @@
-[gd_scene load_steps=3 format=3 uid="uid://b72pmf3gs41en"]
+[gd_scene load_steps=4 format=3 uid="uid://b72pmf3gs41en"]
 
-[ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/Dungeon Sprites by analogstudios/demon_.png" id="1_4f0rs"]
-[ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://GUI/Settings/settings.tscn" id="2_2tp7a"]
+[ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://Main GUI/Settings/settings.tscn" id="2_2tp7a"]
+[ext_resource type="PackedScene" uid="uid://c6kbe1mcxwwga" path="res://Dungen Foe/dungen_foe.tscn" id="2_gbj8d"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_4f0rs"]
+
+[node name="Main World" type="Node2D"]
 texture_filter = 1
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Main Camera" type="Camera2D" parent="."]
+position = Vector2(320, 180)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Dungen Show" type="Node" parent="."]
+
+[node name="Dungen Hall" type="Sprite2D" parent="Dungen Show"]
 position = Vector2(119, 69)
 scale = Vector2(3, 3)
-texture = ExtResource("1_4f0rs")
-hframes = 8
-vframes = 6
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Dungen Foe" parent="Dungen Show" instance=ExtResource("2_gbj8d")]
+position = Vector2(145, 164)
 
-[node name="Settings" parent="CanvasLayer" instance=ExtResource("2_2tp7a")]
+[node name="Dungen Player" type="AnimatedSprite2D" parent="Dungen Show"]
+sprite_frames = SubResource("SpriteFrames_4f0rs")
+
+[node name="Dungen Input" type="Node" parent="."]
+
+[node name="Button" type="Button" parent="Dungen Input"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 45.0
+offset_top = -25.0
+offset_right = 199.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Attack
+"
+
+[node name="Dungen GUI" type="Node" parent="."]
+
+[node name="Extra UI" type="CanvasLayer" parent="."]
+
+[node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]

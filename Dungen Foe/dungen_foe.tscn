@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6kbe1mcxwwga"]
+
+[ext_resource type="Texture2D" uid="uid://ctt2evxr62lay" path="res://Assets/Dungeon Sprites by analogstudios/demon_.png" id="1_nb8te"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n83fd"]
+atlas = ExtResource("1_nb8te")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvemc"]
+atlas = ExtResource("1_nb8te")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rq2yd"]
+atlas = ExtResource("1_nb8te")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amdc8"]
+atlas = ExtResource("1_nb8te")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cexqq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n83fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvemc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rq2yd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amdc8")
+}],
+"loop": true,
+"name": &"Demon_Normal",
+"speed": 5.0
+}]
+
+[node name="Dungen Foe" type="Node2D"]
+texture_filter = 1
+scale = Vector2(3, 3)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cexqq")
+animation = &"Demon_Normal"
