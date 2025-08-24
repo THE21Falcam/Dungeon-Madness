@@ -29,7 +29,7 @@ scale = Vector2(3, 3)
 texture = ExtResource("1_2tp7a")
 
 [node name="Dungen Foe" parent="." instance=ExtResource("2_gbj8d")]
-position = Vector2(159, 158)
+position = Vector2(163, 189)
 
 [node name="Dungen Hero" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_4f0rs")
@@ -58,11 +58,14 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -248.0
-offset_top = -122.0
+offset_top = -85.0
 offset_right = -74.0
-offset_bottom = -83.0
+offset_bottom = -46.0
 grow_horizontal = 2
 grow_vertical = 2
+max_value = 20.0
+step = 1.0
+value = 20.0
 
 [node name="Hero HP Text" type="Label" parent="Extra UI/Dungen GUI"]
 layout_mode = 1
@@ -92,8 +95,9 @@ offset_right = 164.0
 offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
+max_value = 20.0
 step = 1.0
-value = 100.0
+value = 20.0
 
 [node name="GridContainer" type="GridContainer" parent="Extra UI/Dungen GUI"]
 layout_mode = 1
