@@ -3,7 +3,12 @@ extends Node2D
 var HP = 20
 var Foe_Die = false
 var Foe_hit = false
+
+var Foe_Stats = {
+	
+}
 @onready var sprite = $AnimatedSprite2D
+
 var hp: int = 100
 var state: String = "idle"
 
