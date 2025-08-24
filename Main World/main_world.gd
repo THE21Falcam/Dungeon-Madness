@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 func _on_attack_pressed() -> void:
 	if Enemy.state != "die":
 		Enemy.play_attack()
-	Enemy.HP -= 1
+		Enemy.HP -= 1
 	
 	
 	
