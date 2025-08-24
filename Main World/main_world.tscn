@@ -141,3 +141,5 @@ text = "Settings"
 
 [node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]
 visible = false
+
+[connection signal="pressed" from="Extra UI/Dungen GUI/GridContainer/Attack" to="." method="_on_attack_pressed"]
