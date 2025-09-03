@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b72pmf3gs41en"]
+[gd_scene load_steps=8 format=3 uid="uid://b72pmf3gs41en"]
 
 [ext_resource type="Texture2D" uid="uid://bhxp5gtrgr8td" path="res://Assets/Created by Master/DungenLayout.png" id="1_2tp7a"]
 [ext_resource type="Script" uid="uid://bc4jcj26fxylq" path="res://Main World/main_world.gd" id="1_oua0k"]
 [ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://Main GUI/Settings/settings.tscn" id="2_2tp7a"]
+[ext_resource type="Texture2D" uid="uid://bj4l8cvpg0a8u" path="res://Assets/BackGround/pexels-simon73-1323550.jpg" id="2_3p1nf"]
 [ext_resource type="PackedScene" uid="uid://c6kbe1mcxwwga" path="res://Dungen Foe/dungen_foe.tscn" id="2_gbj8d"]
 [ext_resource type="Texture2D" uid="uid://i7iwwefbsp7t" path="res://Assets/Dungeon Sprites by analogstudios/mHero_.png" id="3_gbj8d"]
 
@@ -12,27 +13,10 @@
 texture_filter = 1
 script = ExtResource("1_oua0k")
 
-[node name="Main Camera" type="Camera2D" parent="."]
-position = Vector2(320, 180)
-
-[node name="Player Profile" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(475, 100)
-scale = Vector2(4, 4)
-texture = ExtResource("3_gbj8d")
-hframes = 8
-vframes = 6
-
-[node name="Dungen Hall" type="Sprite2D" parent="."]
-position = Vector2(161, 180)
-scale = Vector2(3, 3)
-texture = ExtResource("1_2tp7a")
-
-[node name="Dungen Foe" parent="." instance=ExtResource("2_gbj8d")]
-position = Vector2(163, 189)
-
-[node name="Dungen Hero" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_4f0rs")
+[node name="Pexels-simon73-1323550" type="Sprite2D" parent="."]
+position = Vector2(319.8, 180.425)
+scale = Vector2(0.281337, 0.24946)
+texture = ExtResource("2_3p1nf")
 
 [node name="Extra UI" type="CanvasLayer" parent="."]
 
@@ -140,5 +124,27 @@ size_flags_vertical = 3
 
 [node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]
 visible = false
+
+[node name="Main Camera" type="Camera2D" parent="."]
+position = Vector2(320, 180)
+
+[node name="Player Profile" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(475, 100)
+scale = Vector2(4, 4)
+texture = ExtResource("3_gbj8d")
+hframes = 8
+vframes = 6
+
+[node name="Dungen Hall" type="Sprite2D" parent="."]
+position = Vector2(161, 180)
+scale = Vector2(3, 3)
+texture = ExtResource("1_2tp7a")
+
+[node name="Dungen Foe" parent="." instance=ExtResource("2_gbj8d")]
+position = Vector2(163, 189)
+
+[node name="Dungen Hero" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4f0rs")
 
 [connection signal="pressed" from="Extra UI/Dungen GUI/GridContainer/Attack" to="." method="_on_attack_pressed"]
