@@ -12,6 +12,13 @@
 texture_filter = 1
 script = ExtResource("1_oua0k")
 
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -113.0
+offset_top = -68.0
+offset_right = 753.0
+offset_bottom = 428.0
+color = Color(0.378339, 0.409674, 0.300397, 1)
+
 [node name="Extra UI" type="CanvasLayer" parent="."]
 
 [node name="Dungen GUI" type="Control" parent="Extra UI"]
