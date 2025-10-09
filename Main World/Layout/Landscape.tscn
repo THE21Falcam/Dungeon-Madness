@@ -1,15 +1,20 @@
-[gd_scene load_steps=7 format=3 uid="uid://b72pmf3gs41en"]
+[gd_scene load_steps=10 format=3 uid="uid://b72pmf3gs41en"]
 
 [ext_resource type="Texture2D" uid="uid://bhxp5gtrgr8td" path="res://Assets/Created by Master/DungenLayout.png" id="1_2tp7a"]
 [ext_resource type="Script" uid="uid://bc4jcj26fxylq" path="res://Main World/main_world.gd" id="1_oua0k"]
-[ext_resource type="PackedScene" uid="uid://buyp78y802gnt" path="res://Main GUI/Settings/settings.tscn" id="2_2tp7a"]
+[ext_resource type="FontFile" uid="uid://c86kjdml2jtfw" path="res://Assets/m6x11.ttf" id="2_3p1nf"]
 [ext_resource type="PackedScene" uid="uid://c6kbe1mcxwwga" path="res://Dungen Foe/dungen_foe.tscn" id="2_gbj8d"]
+[ext_resource type="Texture2D" uid="uid://cpn8vglwg72bg" path="res://Assets/[VerArc Stash] Basic_Skills_and_Buffs/Buffs/attack_boost.png" id="3_dvrh3"]
 [ext_resource type="Texture2D" uid="uid://i7iwwefbsp7t" path="res://Assets/Dungeon Sprites by analogstudios/mHero_.png" id="3_gbj8d"]
+[ext_resource type="Texture2D" uid="uid://cauuum3ud4ose" path="res://Assets/[VerArc Stash] Basic_Skills_and_Buffs/Buffs/defense_boost.png" id="4_iucys"]
+[ext_resource type="Texture2D" uid="uid://ra3vdcwk2kia" path="res://Assets/[VerArc Stash] Basic_Skills_and_Buffs/Buffs/ghost_form_(physical_damage_immunity).png" id="9_2tmv7"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_4f0rs"]
+[sub_resource type="Theme" id="Theme_dvrh3"]
+default_font = ExtResource("2_3p1nf")
 
 [node name="Main World" type="Node2D"]
 texture_filter = 1
+position = Vector2(1, 0)
 script = ExtResource("1_oua0k")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -22,18 +27,20 @@ color = Color(0.66277343, 0.5719349, 0.7330646, 1)
 [node name="Extra UI" type="CanvasLayer" parent="."]
 
 [node name="Dungen GUI" type="Control" parent="Extra UI"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -320.0
+offset_left = -319.0
 offset_top = -180.0
-offset_right = 320.0
+offset_right = 321.0
 offset_bottom = 180.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = SubResource("Theme_dvrh3")
 
 [node name="Foe HP Bar" type="ProgressBar" parent="Extra UI/Dungen GUI"]
 layout_mode = 1
@@ -42,10 +49,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -248.0
-offset_top = -85.0
-offset_right = -74.0
-offset_bottom = -46.0
+offset_left = -160.0
+offset_top = -80.0
+offset_right = -37.0
+offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 2
 max_value = 20.0
@@ -59,13 +66,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 71.0
-offset_top = -18.5
-offset_right = 93.0
-offset_bottom = 4.5
+offset_left = 57.0
+offset_top = -35.0
+offset_right = 71.0
+offset_bottom = -21.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Hero HP Bar" type="ProgressBar" parent="Extra UI/Dungen GUI/Hero HP Text"]
 layout_mode = 1
@@ -74,9 +83,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 18.0
+offset_left = 14.0
 offset_top = -13.5
-offset_right = 164.0
+offset_right = 160.0
 offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
@@ -91,10 +100,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 48.0
-offset_top = 21.0
-offset_right = 272.0
-offset_bottom = 117.0
+offset_left = 25.0
+offset_top = 51.0
+offset_right = 249.0
+offset_bottom = 147.0
 grow_horizontal = 2
 grow_vertical = 2
 columns = 2
@@ -122,57 +131,133 @@ text = "Items"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+text = "Settings"
 
 [node name="Level" type="Label" parent="Extra UI/Dungen GUI"]
 layout_mode = 0
-offset_left = 462.0
-offset_top = 88.0
-offset_right = 502.0
-offset_bottom = 111.0
+offset_left = 432.0
+offset_top = 87.0
+offset_right = 486.0
+offset_bottom = 101.0
 text = "LV 1"
-horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="EXP" type="Label" parent="Extra UI/Dungen GUI"]
 layout_mode = 0
-offset_left = 462.0
-offset_top = 118.0
-offset_right = 502.0
-offset_bottom = 141.0
+offset_left = 432.0
+offset_top = 113.0
+offset_right = 454.0
+offset_bottom = 127.0
 text = "EXP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="Extra UI/Dungen GUI/EXP"]
 layout_mode = 0
-offset_left = 41.0
-offset_top = -2.0
-offset_right = 115.0
-offset_bottom = 25.0
-
-[node name="Settings" parent="Extra UI" instance=ExtResource("2_2tp7a")]
-visible = false
+offset_left = 27.0
+offset_top = -8.0
+offset_right = 100.0
+offset_bottom = 19.0
 
 [node name="Main Camera" type="Camera2D" parent="."]
 position = Vector2(320, 180)
 
 [node name="Player Profile" type="Sprite2D" parent="."]
 texture_filter = 1
-position = Vector2(424, 100)
+position = Vector2(403, 81)
 scale = Vector2(4, 4)
 texture = ExtResource("3_gbj8d")
 hframes = 8
 vframes = 6
 
-[node name="Dungen Hall" type="Sprite2D" parent="."]
-position = Vector2(161, 180)
+[node name="DungenLayout" type="Sprite2D" parent="."]
+position = Vector2(174, 192)
 scale = Vector2(3, 3)
 texture = ExtResource("1_2tp7a")
 
 [node name="Dungen Foe" parent="." instance=ExtResource("2_gbj8d")]
-position = Vector2(163, 189)
+position = Vector2(174, 189)
+scale = Vector2(5, 5)
 
-[node name="Dungen Hero" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_4f0rs")
+[node name="AttackBoost" type="Sprite2D" parent="."]
+position = Vector2(404, 191)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dvrh3")
+
+[node name="Label" type="Label" parent="AttackBoost"]
+anchors_preset = -1
+anchor_top = 0.03125
+anchor_bottom = 0.03125
+offset_left = -6.0
+offset_top = 8.5
+offset_right = 20.0
+offset_bottom = 22.5
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_3p1nf")
+text = "LV 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="DefenseBoost" type="Sprite2D" parent="."]
+position = Vector2(510, 190)
+scale = Vector2(2, 2)
+texture = ExtResource("4_iucys")
+
+[node name="Label" type="Label" parent="DefenseBoost"]
+offset_left = -6.5
+offset_top = 9.0
+offset_right = 19.5
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_3p1nf")
+text = "LV 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GhostForm(physicalDamageImmunity)" type="Sprite2D" parent="."]
+position = Vector2(457, 190)
+scale = Vector2(2, 2)
+texture = ExtResource("9_2tmv7")
+
+[node name="Label" type="Label" parent="GhostForm(physicalDamageImmunity)"]
+offset_left = -6.5
+offset_top = 8.5
+offset_right = 19.5
+offset_bottom = 22.5
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_3p1nf")
+theme_override_font_sizes/font_size = 16
+text = "LV 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="ColorRect3" type="ColorRect" parent="."]
+offset_left = 59.0
+offset_top = 89.0
+offset_right = 148.0
+offset_bottom = 151.0
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
+
+[node name="Label" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 45.0
+offset_bottom = 22.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_3p1nf")
+text = "Goblin"
+
+[node name="Label2" type="Label" parent="ColorRect3"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 33.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_3p1nf")
+text = "LV1"
 
 [connection signal="pressed" from="Extra UI/Dungen GUI/GridContainer/Attack" to="." method="_on_attack_pressed"]
