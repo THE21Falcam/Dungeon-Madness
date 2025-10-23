@@ -19,42 +19,6 @@ offset_right = 472.0
 offset_bottom = 754.0
 color = Color(0.37048164, 0.6787809, 0.6364452, 1)
 
-[node name="Hero HP Text" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 124.0
-offset_top = 366.0
-offset_right = 168.0
-offset_bottom = 411.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_fonts/font = ExtResource("2_3p1nf")
-theme_override_font_sizes/font_size = 32
-text = "HP"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Hero HP Bar" type="ProgressBar" parent="Hero HP Text"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -16.5
-offset_right = 137.0
-offset_bottom = 10.5
-grow_horizontal = 2
-grow_vertical = 2
-max_value = 20.0
-step = 1.0
-value = 20.0
-show_percentage = false
-
 [node name="GridContainer" type="GridContainer" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -102,78 +66,35 @@ theme_override_fonts/font = ExtResource("2_3p1nf")
 theme_override_font_sizes/font_size = 32
 text = "Settings"
 
-[node name="Level" type="Label" parent="."]
-offset_left = 182.0
-offset_top = 300.0
-offset_right = 208.0
-offset_bottom = 314.0
-scale = Vector2(2, 2)
-theme_override_fonts/font = ExtResource("2_3p1nf")
-text = "LV 4"
-vertical_alignment = 1
-
-[node name="EXP" type="Label" parent="."]
-offset_left = 178.0
-offset_top = 337.0
-offset_right = 200.0
-offset_bottom = 351.0
-theme_override_fonts/font = ExtResource("2_3p1nf")
-text = "EXP"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="ProgressBar" type="ProgressBar" parent="EXP"]
-layout_mode = 0
-offset_left = 27.0
-offset_top = -6.0
-offset_right = 100.0
-offset_bottom = 19.0
-show_percentage = false
-
 [node name="Main Camera" type="Camera2D" parent="."]
 position = Vector2(180, 320)
 
-[node name="Player Profile" type="Sprite2D" parent="."]
+[node name="PROFILE" type="Node" parent="."]
+
+[node name="DefenseBoost" type="Sprite2D" parent="PROFILE"]
+position = Vector2(96, 361)
+scale = Vector2(2, 2)
+texture = ExtResource("4_iucys")
+
+[node name="Label" type="Label" parent="PROFILE/DefenseBoost"]
 texture_filter = 1
-position = Vector2(149, 303)
-scale = Vector2(4, 4)
-texture = ExtResource("3_gbj8d")
-hframes = 8
-vframes = 6
-
-[node name="DungenLayout" type="Sprite2D" parent="."]
-position = Vector2(181, 143)
-scale = Vector2(3, 3)
-texture = ExtResource("1_2tp7a")
-
-[node name="Foe HP Bar" type="ProgressBar" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 166.0
-offset_top = 52.0
-offset_right = 289.0
-offset_bottom = 90.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -7.5
+offset_top = 9.0
+offset_right = 25.5
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
 theme_override_fonts/font = ExtResource("2_3p1nf")
-max_value = 20.0
-step = 1.0
-value = 20.0
-show_percentage = false
+text = "LV 2"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Dungen Foe" parent="." instance=ExtResource("2_gbj8d")]
-position = Vector2(181, 140)
-scale = Vector2(5, 5)
-
-[node name="AttackBoost" type="Sprite2D" parent="."]
-position = Vector2(96, 301)
+[node name="AttackBoost" type="Sprite2D" parent="PROFILE"]
+position = Vector2(96, 308)
 scale = Vector2(2, 2)
 texture = ExtResource("3_dvrh3")
 
-[node name="Label" type="Label" parent="AttackBoost"]
+[node name="Label" type="Label" parent="PROFILE/AttackBoost"]
+texture_filter = 1
 anchors_preset = -1
 anchor_top = 0.03125
 anchor_bottom = 0.03125
@@ -187,30 +108,85 @@ text = "LV 2"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="DefenseBoost" type="Sprite2D" parent="."]
-position = Vector2(96, 354)
-scale = Vector2(2, 2)
-texture = ExtResource("4_iucys")
+[node name="Player Profile" type="Sprite2D" parent="PROFILE"]
+texture_filter = 1
+position = Vector2(149, 303)
+scale = Vector2(4, 4)
+texture = ExtResource("3_gbj8d")
+hframes = 8
+vframes = 6
 
-[node name="Label" type="Label" parent="DefenseBoost"]
-offset_left = -7.5
-offset_top = 9.0
-offset_right = 25.5
-offset_bottom = 23.0
-scale = Vector2(0.5, 0.5)
+[node name="EXP" type="Label" parent="PROFILE"]
+texture_filter = 1
+offset_left = 178.0
+offset_top = 337.0
+offset_right = 200.0
+offset_bottom = 351.0
 theme_override_fonts/font = ExtResource("2_3p1nf")
-text = "LV 2"
+text = "EXP"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ColorRect3" type="ColorRect" parent="."]
+[node name="Level" type="Label" parent="PROFILE"]
+texture_filter = 1
+offset_left = 182.0
+offset_top = 300.0
+offset_right = 208.0
+offset_bottom = 314.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_3p1nf")
+text = "LV 4"
+vertical_alignment = 1
+
+[node name="Hero HP Text" type="Label" parent="PROFILE"]
+texture_filter = 1
+offset_left = 133.0
+offset_top = 367.5
+offset_right = 161.0
+offset_bottom = 395.5
+theme_override_fonts/font = ExtResource("2_3p1nf")
+theme_override_font_sizes/font_size = 32
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hero HP Bar" type="ProgressBar" parent="PROFILE"]
+texture_filter = 1
+offset_left = 169.0
+offset_top = 366.0
+offset_right = 286.0
+offset_bottom = 393.0
+max_value = 20.0
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="ProgressBar" type="ProgressBar" parent="PROFILE"]
+texture_filter = 1
+offset_left = 205.0
+offset_top = 331.0
+offset_right = 278.0
+offset_bottom = 356.0
+show_percentage = false
+
+[node name="ENEMY" type="Node" parent="."]
+
+[node name="DungenLayout" type="Sprite2D" parent="ENEMY"]
+texture_filter = 1
+position = Vector2(181, 143)
+scale = Vector2(3, 3)
+texture = ExtResource("1_2tp7a")
+
+[node name="ColorRect3" type="ColorRect" parent="ENEMY"]
+texture_filter = 1
 offset_left = 66.0
 offset_top = 40.0
 offset_right = 155.0
 offset_bottom = 102.0
 color = Color(0.28118682, 0.28118688, 0.28118682, 1)
 
-[node name="Label" type="Label" parent="ColorRect3"]
+[node name="Label" type="Label" parent="ENEMY/ColorRect3"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 11.0
 offset_top = 8.0
@@ -220,7 +196,8 @@ scale = Vector2(2, 2)
 theme_override_fonts/font = ExtResource("2_3p1nf")
 text = "Goblin"
 
-[node name="Label2" type="Label" parent="ColorRect3"]
+[node name="Label2" type="Label" parent="ENEMY/ColorRect3"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 12.0
 offset_top = 38.0
@@ -228,5 +205,29 @@ offset_right = 33.0
 offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("2_3p1nf")
 text = "LV1"
+
+[node name="Foe HP Bar" type="ProgressBar" parent="ENEMY/ColorRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.5
+offset_top = -19.0
+offset_right = 178.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_3p1nf")
+max_value = 20.0
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="Dungen Foe" parent="ENEMY" instance=ExtResource("2_gbj8d")]
+position = Vector2(181, 140)
+scale = Vector2(5, 5)
 
 [connection signal="pressed" from="GridContainer/Attack" to="." method="_on_attack_pressed"]

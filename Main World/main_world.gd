@@ -1,7 +1,7 @@
 extends Node2D
 
-@onready var Enemy = $"Dungen Foe"
-@onready var For_HP_Bar = $"Foe HP Bar"
+@onready var Enemy = $"ENEMY/Dungen Foe"
+@onready var For_HP_Bar = $"ENEMY/ColorRect3/Foe HP Bar"
 @onready var Attack_Button = $"GridContainer/Attack"
 
 func _process(delta: float) -> void:
