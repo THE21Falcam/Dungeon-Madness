@@ -20,3 +20,4 @@
    - Boost Portion(Boosts Damage, Enemy Miss Rate for Limited Time)
  - Write Script for Skill (Skills will Have Heal or Buff Spell Similat to SMT or Persona)
  - Add Some Statistics (to Be decided What to Add)
+ - Add Multiplayer Support Compatable With [**BotRoulette**](https://github.com/THE21Falcam/BotRoulette)
