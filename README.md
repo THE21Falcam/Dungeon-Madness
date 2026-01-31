@@ -4,7 +4,7 @@
 # Features to be Included
  - Save and Load System
  - Level Progression
- - ~~Turn Based Battle~~
+ - Multiplayer Compatible With [**BotRoulette**](https://github.com/THE21Falcam/BotRoulette)
 # Credits / Special Thanks
  - UI Sound Effect By [**OwlishMedia**](https://opengameart.org/content/8-bit-sound-effect-pack)
 # ChangeLog
