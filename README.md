@@ -12,6 +12,7 @@
    - Defined Basic Structure for the Game
 # Personal Notes to Add Features (Will Remove this Section In Readme After Implementing these Features)
  - Add Chest With Loot after Enemy gets Defeted
+ - Add DayNight Cycle and Custom Calender System
  - Add Inventory to Store Loot
  - Add Stat for Mana MP
  - Add Items
