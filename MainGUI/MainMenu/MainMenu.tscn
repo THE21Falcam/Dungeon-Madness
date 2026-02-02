@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://drenbodliwxxy"]
+
+[ext_resource type="FontFile" uid="uid://c86kjdml2jtfw" path="res://Assets/m6x11.ttf" id="1_4v8n3"]
+
+[node name="MAINMENU" type="Node2D"]
+texture_filter = 1
+
+[node name="Button" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 172.0
+offset_right = 270.0
+offset_bottom = 244.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4v8n3")
+text = "SinglePlayer"
+
+[node name="Button2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 276.0
+offset_right = 270.0
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4v8n3")
+text = "Multiplayer"
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 102.0
+offset_top = 380.0
+offset_right = 270.0
+offset_bottom = 452.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_4v8n3")
+text = "Exit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(180, 320)

@@ -1,0 +1,301 @@
+[gd_scene load_steps=8 format=3 uid="uid://b72pmf3gs41en"]
+
+[ext_resource type="Script" uid="uid://bc4jcj26fxylq" path="res://SCRIPTS/main_world.gd" id="1_7by8a"]
+[ext_resource type="FontFile" uid="uid://c86kjdml2jtfw" path="res://Assets/m6x11.ttf" id="2_nt3su"]
+[ext_resource type="Texture2D" uid="uid://cauuum3ud4ose" path="res://Assets/[VerArc Stash] Basic_Skills_and_Buffs/Buffs/defense_boost.png" id="3_uiiel"]
+[ext_resource type="Texture2D" uid="uid://cpn8vglwg72bg" path="res://Assets/[VerArc Stash] Basic_Skills_and_Buffs/Buffs/attack_boost.png" id="4_hx2hm"]
+[ext_resource type="Texture2D" uid="uid://i7iwwefbsp7t" path="res://Assets/Dungeon Sprites by analogstudios/mHero_.png" id="5_dfqil"]
+[ext_resource type="Texture2D" uid="uid://bhxp5gtrgr8td" path="res://Assets/Created by Master/DungenLayout.png" id="6_4vuf3"]
+[ext_resource type="PackedScene" uid="uid://c6kbe1mcxwwga" path="res://Dungen Foe/dungen_foe.tscn" id="7_aysls"]
+
+[node name="Main World" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_7by8a")
+
+[node name="BackGround" type="ColorRect" parent="."]
+offset_left = -113.0
+offset_top = -109.0
+offset_right = 472.0
+offset_bottom = 754.0
+color = Color(0.37048164, 0.6787809, 0.6364452, 1)
+
+[node name="Main Camera" type="Camera2D" parent="."]
+position = Vector2(180, 320)
+
+[node name="BUTTON" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = 430.0
+offset_right = 304.0
+offset_bottom = 587.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="Attack" type="Button" parent="BUTTON"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_nt3su")
+theme_override_font_sizes/font_size = 32
+text = "Attack
+"
+
+[node name="Skill" type="Button" parent="BUTTON"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_nt3su")
+theme_override_font_sizes/font_size = 32
+text = "Skill"
+
+[node name="Item" type="Button" parent="BUTTON"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_nt3su")
+theme_override_font_sizes/font_size = 32
+text = "Items"
+
+[node name="Guard" type="Button" parent="BUTTON"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("2_nt3su")
+theme_override_font_sizes/font_size = 32
+text = "Guard"
+
+[node name="PROFILE" type="Node2D" parent="."]
+
+[node name="UI" type="ColorRect" parent="PROFILE"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = 262.0
+offset_right = 337.0
+offset_bottom = 418.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14044744, 0.14044744, 0.14044744, 0.4745098)
+
+[node name="DAYNIGHT" type="Node2D" parent="PROFILE"]
+
+[node name="SunMoonUI" type="ColorRect" parent="PROFILE/DAYNIGHT"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 56.0
+offset_top = 299.0
+offset_right = 96.0
+offset_bottom = 339.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="PROFILE/DAYNIGHT"]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 43.0
+offset_top = 345.0
+offset_right = 108.0
+offset_bottom = 364.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "12:21 AM"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PROFILE/DAYNIGHT"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 50.0
+offset_top = 363.0
+offset_right = 100.0
+offset_bottom = 385.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "MON 12"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UPGRADE" type="Node2D" parent="PROFILE"]
+
+[node name="DefenseBoost" type="Sprite2D" parent="PROFILE/UPGRADE"]
+position = Vector2(131, 361)
+scale = Vector2(2, 2)
+texture = ExtResource("3_uiiel")
+
+[node name="Label" type="Label" parent="PROFILE/UPGRADE/DefenseBoost"]
+texture_filter = 1
+offset_left = -7.5
+offset_top = 9.0
+offset_right = 25.5
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "LV 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="AttackBoost" type="Sprite2D" parent="PROFILE/UPGRADE"]
+position = Vector2(131, 308)
+scale = Vector2(2, 2)
+texture = ExtResource("4_hx2hm")
+
+[node name="Label" type="Label" parent="PROFILE/UPGRADE/AttackBoost"]
+texture_filter = 1
+anchors_preset = -1
+anchor_top = 0.03125
+anchor_bottom = 0.03125
+offset_left = -8.0
+offset_top = 8.5
+offset_right = 25.0
+offset_bottom = 22.5
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "LV 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="PLAYER" type="Node2D" parent="PROFILE"]
+
+[node name="Player Profile" type="Sprite2D" parent="PROFILE/PLAYER"]
+texture_filter = 1
+position = Vector2(184, 303)
+scale = Vector2(4, 4)
+texture = ExtResource("5_dfqil")
+hframes = 8
+vframes = 6
+
+[node name="EXP" type="Label" parent="PROFILE/PLAYER"]
+texture_filter = 1
+offset_left = 213.0
+offset_top = 337.0
+offset_right = 235.0
+offset_bottom = 351.0
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "EXP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Level" type="Label" parent="PROFILE/PLAYER"]
+texture_filter = 1
+offset_left = 217.0
+offset_top = 300.0
+offset_right = 243.0
+offset_bottom = 314.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "LV 4"
+vertical_alignment = 1
+
+[node name="Hero HP Text" type="Label" parent="PROFILE/PLAYER"]
+texture_filter = 1
+offset_left = 168.0
+offset_top = 367.5
+offset_right = 196.0
+offset_bottom = 395.5
+theme_override_fonts/font = ExtResource("2_nt3su")
+theme_override_font_sizes/font_size = 32
+text = "HP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Hero HP Bar" type="ProgressBar" parent="PROFILE/PLAYER"]
+texture_filter = 1
+offset_left = 204.0
+offset_top = 366.0
+offset_right = 321.0
+offset_bottom = 393.0
+max_value = 20.0
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="ProgressBar" type="ProgressBar" parent="PROFILE/PLAYER"]
+texture_filter = 1
+offset_left = 240.0
+offset_top = 331.0
+offset_right = 313.0
+offset_bottom = 356.0
+show_percentage = false
+
+[node name="ENEMY" type="Node2D" parent="."]
+
+[node name="DungenLayout" type="Sprite2D" parent="ENEMY"]
+texture_filter = 1
+position = Vector2(181, 143)
+scale = Vector2(3, 3)
+texture = ExtResource("6_4vuf3")
+
+[node name="ColorRect3" type="ColorRect" parent="ENEMY"]
+texture_filter = 1
+offset_left = 66.0
+offset_top = 40.0
+offset_right = 155.0
+offset_bottom = 102.0
+color = Color(0.28118682, 0.28118688, 0.28118682, 1)
+
+[node name="Label" type="Label" parent="ENEMY/ColorRect3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 11.0
+offset_top = 8.0
+offset_right = 45.0
+offset_bottom = 22.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "Goblin"
+
+[node name="Label2" type="Label" parent="ENEMY/ColorRect3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 12.0
+offset_top = 38.0
+offset_right = 33.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("2_nt3su")
+text = "LV1"
+
+[node name="Foe HP Bar" type="ProgressBar" parent="ENEMY/ColorRect3"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 55.5
+offset_top = -19.0
+offset_right = 178.5
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_nt3su")
+max_value = 20.0
+step = 1.0
+value = 20.0
+show_percentage = false
+
+[node name="Dungen Foe" parent="ENEMY" instance=ExtResource("7_aysls")]
+position = Vector2(181, 138)
+scale = Vector2(5, 5)
+
+[connection signal="pressed" from="BUTTON/Attack" to="." method="_on_attack_pressed"]

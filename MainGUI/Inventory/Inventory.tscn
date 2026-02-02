@@ -1,0 +1,197 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0x4whji1xysd"]
+
+[ext_resource type="FontFile" uid="uid://c86kjdml2jtfw" path="res://Assets/m6x11.ttf" id="1_rop3u"]
+[ext_resource type="Texture2D" uid="uid://dvxuqnyq0p252" path="res://icon.svg" id="2_nfbqq"]
+
+[node name="INVENTORY" type="Node2D"]
+texture_filter = 1
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 60.500008
+offset_top = 142.0
+offset_right = 123.50003
+offset_bottom = 165.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3.9036148, 2.36)
+theme_override_fonts/font = ExtResource("1_rop3u")
+text = "INVENTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(180, 320)
+
+[node name="GridContainer" type="GridContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = 235.0
+offset_right = 296.0
+offset_bottom = 411.0
+grow_horizontal = 2
+grow_vertical = 2
+columns = 4
+
+[node name="Panel" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel2" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel2"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel3" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel3"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel4" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel4"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel5" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel5"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel6" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel6"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel7" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel7"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel8" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel8"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel9" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel9"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel10" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel10"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel11" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel11"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Panel12" type="Panel" parent="GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.0
+
+[node name="Icon" type="Sprite2D" parent="GridContainer/Panel12"]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_nfbqq")
+
+[node name="Label2" type="Label" parent="."]
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 119.99999
+offset_top = 445.5
+offset_right = 240.0
+offset_bottom = 506.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_rop3u")
+theme_override_font_sizes/font_size = 32
+text = "FOOD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Left" type="Button" parent="."]
+offset_left = 64.0
+offset_top = 458.0
+offset_right = 112.0
+offset_bottom = 490.0
+theme_override_fonts/font = ExtResource("1_rop3u")
+text = "<"
+
+[node name="Right" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 248.0
+offset_top = 458.0
+offset_right = 296.0
+offset_bottom = 490.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_rop3u")
+text = ">"

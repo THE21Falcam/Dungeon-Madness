@@ -32,11 +32,13 @@ func _ready() -> void:
 	play_spawn()
 
 func _process(delta: float) -> void:
-	
 	if state == "attack" and not sprite.is_playing():
 		play_idle()
 	
 	if state == "spawn" and not sprite.is_playing():
+		play_idle()
+	
+	if state == "idle" and not sprite.is_playing():
 		play_idle()
 	
 	# Check health
