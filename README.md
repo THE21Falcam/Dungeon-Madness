@@ -14,7 +14,6 @@
    - Health Portion
    - Boost Portion(Boosts Damage, Enemy Miss Rate for Limited Time)
  - Add Some Statistics (to Be decided What to Add)
- - Multiplayer Compatible With [**BotRoulette**](https://github.com/THE21Falcam/BotRoulette)
 # Credits / Special Thanks
  - UI Sound Effect By [**OwlishMedia**](https://opengameart.org/content/8-bit-sound-effect-pack)
 # ChangeLog
